@@ -1,69 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.9.6 on darwin)" generated="2024-12-03T19:58:12.155988" rpa="false" schemaversion="5">
-<suite id="s1" name="LogintoWebsite" source="/Users/snapp/ultimateqa_selenium-by-python/LogintoWebsite.robot">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2024-12-03T19:58:12.474188" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<arg>https://www.saucedemo.com/</arg>
+<robot generator="Robot 7.1.1 (Python 3.9.6 on darwin)" generated="2024-12-04T10:01:28.784559" rpa="false" schemaversion="5">
+<suite id="s1" name="FirstExample" source="/Users/snapp/ultimateqa_selenium-by-python/FirstExample.robot">
+<test id="s1-t1" name="Select the Free Course" line="9">
+<kw name="Hover Over Education Menu">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-04T10:01:28.885360" level="INFO">Opening browser 'chrome' to base url 'https://ultimateqa.com/automation#'.</msg>
+<arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-03T19:58:12.472325" elapsed="2.754686"/>
+<status status="PASS" start="2024-12-04T10:01:28.885227" elapsed="3.048692"/>
 </kw>
-<test id="s1-t1" name="Valid Login Test" line="11">
-<kw name="Input Username">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-03T19:58:15.241874" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<arg>id=user-name</arg>
-<arg>${username}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-03T19:58:15.237548" elapsed="0.202758"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-04T10:01:31.934738" elapsed="0.369700"/>
 </kw>
-<arg>${USERNAME}</arg>
-<status status="PASS" start="2024-12-03T19:58:15.235119" elapsed="0.205794"/>
-</kw>
-<kw name="Input Password">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-03T19:58:15.444013" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
-<arg>id=password</arg>
-<arg>${password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-03T19:58:15.443275" elapsed="0.043848"/>
-</kw>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-12-03T19:58:15.441801" elapsed="0.045781"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-03T19:58:15.489719" level="INFO">Clicking button 'id=login-button'.</msg>
-<arg>id=login-button</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-03T19:58:15.489092" elapsed="0.066545"/>
-</kw>
-<status status="PASS" start="2024-12-03T19:58:15.488253" elapsed="0.067796"/>
-</kw>
-<kw name="Verify Successful Login">
-<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>xpath=//span[@class='title']</arg>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]</arg>
 <arg>timeout=5</arg>
-<doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-12-03T19:58:15.558626" elapsed="0.016057"/>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-04T10:01:32.304615" elapsed="0.026027"/>
 </kw>
-<kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2024-12-03T19:58:15.577191" level="INFO">Verifying element 'xpath=//span[@class='title']' contains exact text 'Products'.</msg>
-<arg>xpath=//span[@class='title']</arg>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-12-04T10:01:32.330953" level="INFO">Simulating Mouse Over on element 'xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]'.</msg>
+<arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-12-04T10:01:32.330796" elapsed="0.281025"/>
+</kw>
+<doc>Click the Education menu.</doc>
+<status status="PASS" start="2024-12-04T10:01:28.884772" elapsed="3.727347"/>
+</kw>
+<kw name="Click Free Courses Menu Item">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-04T10:01:32.613050" elapsed="0.047947"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-04T10:01:32.661358" level="INFO">Clicking element 'xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]'.</msg>
+<arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-04T10:01:32.661156" elapsed="12.795968"/>
+</kw>
+<doc>Click the Free Courses item from the Education dropdown.</doc>
+<status status="PASS" start="2024-12-04T10:01:32.612628" elapsed="12.845230"/>
+</kw>
+<kw name="Verify Free Courses Page Loaded">
+<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
+<arg>class=collections__heading</arg>
 <arg>Products</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2024-12-03T19:58:15.576024" elapsed="0.021611"/>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" start="2024-12-04T10:01:45.460525" elapsed="0.016041"/>
 </kw>
-<status status="PASS" start="2024-12-03T19:58:15.557029" elapsed="0.041891"/>
+<doc>Verify that the Free Courses page loaded successfully.</doc>
+<status status="PASS" start="2024-12-04T10:01:45.459885" elapsed="0.016783"/>
 </kw>
-<doc>TC to validate successful login</doc>
-<status status="PASS" start="2024-12-03T19:58:15.229641" elapsed="0.370961"/>
+<doc>Select the Free Course</doc>
+<status status="PASS" start="2024-12-04T10:01:28.884362" elapsed="16.592562"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-03T19:58:15.604263" elapsed="0.103358"/>
+<status status="PASS" start="2024-12-04T10:01:45.479608" elapsed="0.101933"/>
 </kw>
-<status status="PASS" start="2024-12-03T19:58:12.167102" elapsed="3.540828"/>
+<status status="PASS" start="2024-12-04T10:01:28.785474" elapsed="16.796175"/>
 </suite>
 <statistics>
 <total>
@@ -72,7 +71,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="LogintoWebsite">LogintoWebsite</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="FirstExample">FirstExample</stat>
 </suite>
 </statistics>
 <errors>

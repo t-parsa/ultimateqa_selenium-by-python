@@ -7,7 +7,7 @@ Suite Teardown    Close Browser
 ${USERNAME}       standard_user
 ${PASSWORD}       secret_sauce
 
-*** Test Cases ***
+*** Test Cases **
 Valid Login Test
     [Documentation]    TC to validate successful login
     Input Username     ${USERNAME}
