@@ -1,68 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.9.6 on darwin)" generated="2024-12-04T10:01:28.784559" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.9.6 on darwin)" generated="2024-12-05T19:22:39.416918" rpa="false" schemaversion="5">
 <suite id="s1" name="FirstExample" source="/Users/snapp/ultimateqa_selenium-by-python/FirstExample.robot">
-<test id="s1-t1" name="Select the Free Course" line="9">
+<test id="s1-t1" name="Sign In in the Site" line="14">
+<kw name="Perform Free Course Selection" type="SETUP">
 <kw name="Hover Over Education Menu">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-04T10:01:28.885360" level="INFO">Opening browser 'chrome' to base url 'https://ultimateqa.com/automation#'.</msg>
+<msg time="2024-12-05T19:22:39.522821" level="INFO">Opening browser 'chrome' to base url 'https://ultimateqa.com/automation#'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-04T10:01:28.885227" elapsed="3.048692"/>
+<status status="PASS" start="2024-12-05T19:22:39.522634" elapsed="3.850420"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-04T10:01:31.934738" elapsed="0.369700"/>
+<status status="PASS" start="2024-12-05T19:22:43.374299" elapsed="0.320255"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-04T10:01:32.304615" elapsed="0.026027"/>
+<status status="PASS" start="2024-12-05T19:22:43.694963" elapsed="0.037235"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-12-04T10:01:32.330953" level="INFO">Simulating Mouse Over on element 'xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]'.</msg>
+<msg time="2024-12-05T19:22:43.732663" level="INFO">Simulating Mouse Over on element 'xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]'.</msg>
 <arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-12-04T10:01:32.330796" elapsed="0.281025"/>
+<status status="PASS" start="2024-12-05T19:22:43.732436" elapsed="0.294671"/>
 </kw>
-<doc>Click the Education menu.</doc>
-<status status="PASS" start="2024-12-04T10:01:28.884772" elapsed="3.727347"/>
+<doc>Click on the Education menu.</doc>
+<status status="PASS" start="2024-12-05T19:22:39.522155" elapsed="4.505196"/>
 </kw>
 <kw name="Click Free Courses Menu Item">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]</arg>
 <arg>timeout=5</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-04T10:01:32.613050" elapsed="0.047947"/>
+<status status="PASS" start="2024-12-05T19:22:44.028024" elapsed="0.018461"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-04T10:01:32.661358" level="INFO">Clicking element 'xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]'.</msg>
+<msg time="2024-12-05T19:22:44.046986" level="INFO">Clicking element 'xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]'.</msg>
 <arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-04T10:01:32.661156" elapsed="12.795968"/>
+<status status="PASS" start="2024-12-05T19:22:44.046736" elapsed="13.302377"/>
 </kw>
-<doc>Click the Free Courses item from the Education dropdown.</doc>
-<status status="PASS" start="2024-12-04T10:01:32.612628" elapsed="12.845230"/>
+<doc>Click on the Free Courses item from the Education dropdown.</doc>
+<status status="PASS" start="2024-12-05T19:22:44.027641" elapsed="13.321838"/>
 </kw>
 <kw name="Verify Free Courses Page Loaded">
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>class=collections__heading</arg>
 <arg>Products</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2024-12-04T10:01:45.460525" elapsed="0.016041"/>
+<status status="PASS" start="2024-12-05T19:22:57.350445" elapsed="0.022307"/>
 </kw>
 <doc>Verify that the Free Courses page loaded successfully.</doc>
-<status status="PASS" start="2024-12-04T10:01:45.459885" elapsed="0.016783"/>
+<status status="PASS" start="2024-12-05T19:22:57.349858" elapsed="0.023127"/>
 </kw>
-<doc>Select the Free Course</doc>
-<status status="PASS" start="2024-12-04T10:01:28.884362" elapsed="16.592562"/>
+<doc>Logic to selecting the Free Course.</doc>
+<status status="PASS" start="2024-12-05T19:22:39.521918" elapsed="17.851195"/>
+</kw>
+<kw name="Hover Over Sign In Button">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(), 'Sign In')]</arg>
+<arg>timeout=5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-05T19:22:57.373955" elapsed="0.012694"/>
+</kw>
+<kw name="Mouse Over" owner="SeleniumLibrary">
+<msg time="2024-12-05T19:22:57.387140" level="INFO">Simulating Mouse Over on element 'xpath=//a[contains(text(), 'Sign In')]'.</msg>
+<arg>xpath=//a[contains(text(), 'Sign In')]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="PASS" start="2024-12-05T19:22:57.386897" elapsed="0.267137"/>
+</kw>
+<doc>Hover over the Sign In button.</doc>
+<status status="PASS" start="2024-12-05T19:22:57.373554" elapsed="0.281315"/>
+</kw>
+<kw name="Verify Sign In Page Loaded">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Sign In</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-12-05T19:22:57.657312" elapsed="0.018714"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-05T19:22:57.676901" level="INFO">Clicking element 'xpath=//div[2]/div/nav/ul/li/a'.</msg>
+<arg>xpath=//div[2]/div/nav/ul/li/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-05T19:22:57.676464" elapsed="2.456325"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//h2[@class='page__heading']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-05T19:23:00.133335" elapsed="0.019159"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-05T19:23:00.153236" level="INFO">Clicking element 'xpath=//h2[@class='page__heading']'.</msg>
+<arg>xpath=//h2[@class='page__heading']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-05T19:23:00.152874" elapsed="0.041083"/>
+</kw>
+<doc>Verify that the Sign In page loaded successfully.</doc>
+<status status="PASS" start="2024-12-05T19:22:57.656087" elapsed="2.538076"/>
+</kw>
+<doc>TC for Signing In to the Website.</doc>
+<status status="PASS" start="2024-12-05T19:22:39.521455" elapsed="20.673037"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-04T10:01:45.479608" elapsed="0.101933"/>
+<status status="PASS" start="2024-12-05T19:23:00.195325" elapsed="0.118143"/>
 </kw>
-<status status="PASS" start="2024-12-04T10:01:28.785474" elapsed="16.796175"/>
+<status status="PASS" start="2024-12-05T19:22:39.419235" elapsed="20.894701"/>
 </suite>
 <statistics>
 <total>
