@@ -1,114 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.9.6 on darwin)" generated="2024-12-05T19:22:39.416918" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.9.6 on darwin)" generated="2024-12-05T19:39:33.756975" rpa="false" schemaversion="5">
 <suite id="s1" name="FirstExample" source="/Users/snapp/ultimateqa_selenium-by-python/FirstExample.robot">
 <test id="s1-t1" name="Sign In in the Site" line="14">
 <kw name="Perform Free Course Selection" type="SETUP">
 <kw name="Hover Over Education Menu">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-05T19:22:39.522821" level="INFO">Opening browser 'chrome' to base url 'https://ultimateqa.com/automation#'.</msg>
+<msg time="2024-12-05T19:39:33.847216" level="INFO">Opening browser 'chrome' to base url 'https://ultimateqa.com/automation#'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-05T19:22:39.522634" elapsed="3.850420"/>
+<status status="PASS" start="2024-12-05T19:39:33.847082" elapsed="2.141469"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-05T19:22:43.374299" elapsed="0.320255"/>
+<status status="PASS" start="2024-12-05T19:39:35.991922" elapsed="6.079499"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-12-05T19:39:42.215530" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="phase_1.png"&gt;&lt;img src="phase_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>phase_1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-12-05T19:39:42.071721" elapsed="0.143889"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]</arg>
-<arg>timeout=5</arg>
+<arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-05T19:22:43.694963" elapsed="0.037235"/>
+<status status="PASS" start="2024-12-05T19:39:42.215733" elapsed="0.011600"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-12-05T19:22:43.732663" level="INFO">Simulating Mouse Over on element 'xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]'.</msg>
+<msg time="2024-12-05T19:39:42.227636" level="INFO">Simulating Mouse Over on element 'xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]'.</msg>
 <arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-12-05T19:22:43.732436" elapsed="0.294671"/>
+<status status="PASS" start="2024-12-05T19:39:42.227488" elapsed="0.264636"/>
 </kw>
 <doc>Click on the Education menu.</doc>
-<status status="PASS" start="2024-12-05T19:22:39.522155" elapsed="4.505196"/>
+<status status="PASS" start="2024-12-05T19:39:33.846688" elapsed="8.645689"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-12-05T19:39:42.652798" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="phase_2.png"&gt;&lt;img src="phase_2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>phase_2.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-12-05T19:39:42.492644" elapsed="0.160230"/>
 </kw>
 <kw name="Click Free Courses Menu Item">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]</arg>
-<arg>timeout=5</arg>
+<arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-05T19:22:44.028024" elapsed="0.018461"/>
+<status status="PASS" start="2024-12-05T19:39:42.653217" elapsed="0.009257"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-05T19:22:44.046986" level="INFO">Clicking element 'xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]'.</msg>
+<msg time="2024-12-05T19:39:42.662714" level="INFO">Clicking element 'xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]'.</msg>
 <arg>xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-05T19:22:44.046736" elapsed="13.302377"/>
+<status status="PASS" start="2024-12-05T19:39:42.662595" elapsed="11.089897"/>
 </kw>
 <doc>Click on the Free Courses item from the Education dropdown.</doc>
-<status status="PASS" start="2024-12-05T19:22:44.027641" elapsed="13.321838"/>
+<status status="PASS" start="2024-12-05T19:39:42.653040" elapsed="11.099601"/>
 </kw>
 <kw name="Verify Free Courses Page Loaded">
 <kw name="Wait Until Element Contains" owner="SeleniumLibrary">
 <arg>class=collections__heading</arg>
 <arg>Products</arg>
 <doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2024-12-05T19:22:57.350445" elapsed="0.022307"/>
+<status status="PASS" start="2024-12-05T19:39:53.753228" elapsed="0.017808"/>
 </kw>
 <doc>Verify that the Free Courses page loaded successfully.</doc>
-<status status="PASS" start="2024-12-05T19:22:57.349858" elapsed="0.023127"/>
+<status status="PASS" start="2024-12-05T19:39:53.752844" elapsed="0.018306"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-12-05T19:39:54.048105" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="phase-3.png"&gt;&lt;img src="phase-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>phase-3.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-12-05T19:39:53.771274" elapsed="0.276929"/>
 </kw>
 <doc>Logic to selecting the Free Course.</doc>
-<status status="PASS" start="2024-12-05T19:22:39.521918" elapsed="17.851195"/>
+<status status="PASS" start="2024-12-05T19:39:33.846505" elapsed="20.201783"/>
 </kw>
 <kw name="Hover Over Sign In Button">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//a[contains(text(), 'Sign In')]</arg>
-<arg>timeout=5</arg>
+<arg>timeout=5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-05T19:22:57.373955" elapsed="0.012694"/>
+<status status="PASS" start="2024-12-05T19:39:54.048702" elapsed="0.009811"/>
 </kw>
 <kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2024-12-05T19:22:57.387140" level="INFO">Simulating Mouse Over on element 'xpath=//a[contains(text(), 'Sign In')]'.</msg>
+<msg time="2024-12-05T19:39:54.058814" level="INFO">Simulating Mouse Over on element 'xpath=//a[contains(text(), 'Sign In')]'.</msg>
 <arg>xpath=//a[contains(text(), 'Sign In')]</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2024-12-05T19:22:57.386897" elapsed="0.267137"/>
+<status status="PASS" start="2024-12-05T19:39:54.058662" elapsed="0.261673"/>
 </kw>
 <doc>Hover over the Sign In button.</doc>
-<status status="PASS" start="2024-12-05T19:22:57.373554" elapsed="0.281315"/>
+<status status="PASS" start="2024-12-05T19:39:54.048512" elapsed="0.272307"/>
 </kw>
 <kw name="Verify Sign In Page Loaded">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Sign In</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-12-05T19:22:57.657312" elapsed="0.018714"/>
+<status status="PASS" start="2024-12-05T19:39:54.322339" elapsed="0.018294"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-05T19:22:57.676901" level="INFO">Clicking element 'xpath=//div[2]/div/nav/ul/li/a'.</msg>
+<msg time="2024-12-05T19:39:54.341218" level="INFO">Clicking element 'xpath=//div[2]/div/nav/ul/li/a'.</msg>
 <arg>xpath=//div[2]/div/nav/ul/li/a</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-05T19:22:57.676464" elapsed="2.456325"/>
+<status status="PASS" start="2024-12-05T19:39:54.340928" elapsed="1.999779"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//h2[@class='page__heading']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-05T19:23:00.133335" elapsed="0.019159"/>
+<status status="PASS" start="2024-12-05T19:39:56.341097" elapsed="0.020176"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-05T19:23:00.153236" level="INFO">Clicking element 'xpath=//h2[@class='page__heading']'.</msg>
+<msg time="2024-12-05T19:39:56.361813" level="INFO">Clicking element 'xpath=//h2[@class='page__heading']'.</msg>
 <arg>xpath=//h2[@class='page__heading']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-05T19:23:00.152874" elapsed="0.041083"/>
+<status status="PASS" start="2024-12-05T19:39:56.361539" elapsed="0.040170"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-12-05T19:39:56.610988" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="phase_4.png"&gt;&lt;img src="phase_4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>phase_4.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-12-05T19:39:56.401893" elapsed="0.209180"/>
 </kw>
 <doc>Verify that the Sign In page loaded successfully.</doc>
-<status status="PASS" start="2024-12-05T19:22:57.656087" elapsed="2.538076"/>
+<status status="PASS" start="2024-12-05T19:39:54.321627" elapsed="2.289522"/>
 </kw>
 <doc>TC for Signing In to the Website.</doc>
-<status status="PASS" start="2024-12-05T19:22:39.521455" elapsed="20.673037"/>
+<status status="PASS" start="2024-12-05T19:39:33.846052" elapsed="22.765209"/>
 </test>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-12-05T19:23:00.195325" elapsed="0.118143"/>
+<status status="PASS" start="2024-12-05T19:39:56.611655" elapsed="0.139429"/>
 </kw>
-<status status="PASS" start="2024-12-05T19:22:39.419235" elapsed="20.894701"/>
+<status status="PASS" start="2024-12-05T19:39:33.757594" elapsed="22.993616"/>
 </suite>
 <statistics>
 <total>
