@@ -1,60 +1,41 @@
 *** Settings ***
 Library           SeleniumLibrary
+Variables         Vars/Locator.py
+Variables         vars/URL.py
+Suite Setup       Setup the Test
 Suite Teardown    Close Browser
 
-*** Variables ***
-${URL}            https://ultimateqa.com/automation# 
-
 *** Test Cases ***
-# Select the Free Course
-#     [Documentation]           Tc to Selecting the Free Course.
-#     Perform Free Course Selection
-
-Sign In in the Site
+Select the Free Course and Go to the Sign In Page
     [Documentation]           TC for Signing In to the Website.
-    [Setup]                   Perform Free Course Selection
-    Hover Over Sign In Button
-    Verify Sign In Page Loaded
+    Free Course Selection
+    Go to the Sign In Page
 
 *** Keywords ***
-Perform Free Course Selection
+Setup the Test
+   Open Browser    ${Site_url}    chrome
+   Maximize Browser Window
+   Title Should Be    ${web_title}
+
+Free Course Selection
     [Documentation]           Logic to selecting the Free Course.
-    Hover Over Education Menu
-    Capture Page Screenshot    phase_2.png
-    Click Free Courses Menu Item
-    Verify Free Courses Page Loaded
-    Capture Page Screenshot    phase-3.png
+    Select Free Courses Menu Item
 
-Hover Over Education Menu
-    [Documentation]           Click on the Education menu.
-    Open Browser    ${URL}    chrome
-    Maximize Browser Window
-    Capture Page Screenshot    phase_1.png
-    Wait Until Element Is Visible    xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]    timeout=5s
-    Mouse Over    xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Education')]
+Select Free Courses Menu Item
+    [Documentation]           Click on the Free Courses item and Verify Free Courses Page Loaded
+    Wait Until Element Is Visible    ${Education}    timeout=5s
+    Mouse Over    ${Education}
+    Wait Until Element Is Visible    ${Free_Courses}    timeout=5s
+    Click Element    ${Free_Courses} 
+    Wait Until Element Contains    ${Product}    Products
+    Wait Until Element Is Visible    ${SignIn}    timeout=5s
 
-Click Free Courses Menu Item
-    [Documentation]           Click on the Free Courses item from the Education dropdown.
-    Wait Until Element Is Visible    xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]    timeout=5s
-    Click Element    xpath=//li[contains(@class, 'menu-item')]/a[contains(text(), 'Free Courses')]
-    
-Verify Free Courses Page Loaded
-    [Documentation]           Verify that the Free Courses page loaded successfully.
-    Wait Until Element Contains    class=collections__heading    Products
-
-Hover Over Sign In Button
-    [Documentation]           Hover over the Sign In button.
-    Wait Until Element Is Visible    xpath=//a[contains(text(), 'Sign In')]    timeout=5s
-    Mouse Over    xpath=//a[contains(text(), 'Sign In')]
-
-Verify Sign In Page Loaded
+Go to the Sign In Page
   [Documentation]           Verify that the Sign In page loaded successfully.
+    Mouse Over    ${SignIn} 
     Wait Until Page Contains         Sign In
-    Click Element     xpath=//div[2]/div/nav/ul/li/a                   
-    Wait Until Element Is Visible    xpath=//h2[@class='page__heading']
-    # Wait Until Element Is Visible    xpath=//h2[contains(@class, 'page__heading')]    timeout=10s
-    Click Element    xpath=//h2[@class='page__heading']
-    Capture Page Screenshot    phase_4.png
+    Click Element    ${SignIn}                 
+    Wait Until Element Is Visible    ${SignIn_Text}
 
 
 
