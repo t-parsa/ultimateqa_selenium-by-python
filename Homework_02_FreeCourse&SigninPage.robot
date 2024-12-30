@@ -16,8 +16,7 @@ Setup the Test
    Open Browser    ${Site_url}    chrome
    Maximize Browser Window
    Title Should Be    ${web_title}
-
-Free Course Selection
+.
     [Documentation]           Logic to selecting the Free Course.
     Select Free Courses Menu Item
 
