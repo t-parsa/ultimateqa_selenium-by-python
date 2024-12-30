@@ -12,6 +12,7 @@ ${FIRST_NAME}     Tara
 ${LAST_NAME}      Parsa
 ${POSTAL_CODE}    12345-456789
 
+
 *** Test Cases ***
 Add Item To Cart And Validate
     [Documentation]    This test case about the validating the shopping cart.
